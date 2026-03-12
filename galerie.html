@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie - La Main Occulte</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Cormorant:wght@400;600;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="page-galerie">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="index.html"><img src="img/logo.png" alt="La Main Occulte"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="animations.html">Animations</a></li>
+            <li><a href="galerie.html" class="active">Galerie</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <!-- Bannière Galerie -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Galerie</h1>
+            <p>✦ Plongez dans l'univers visuel de La Main Occulte ✦</p>
+        </div>
+    </section>
+
+    <!-- Carrousel principal -->
+    <section class="carousel-section">
+        <div class="container">
+            <h2>Moments de jonglage</h2>
+            
+            <!-- Carrousel -->
+            <div class="carousel-container">
+                <button class="carousel-btn prev" aria-label="Image précédente">❮</button>
+                
+                <div class="carousel-track-container">
+                    <div class="carousel-track">
+                        <!-- Image 1 -->
+                        <div class="carousel-slide" data-category="contact">
+                            <img src="img/galerie/ballecontact.jpg" alt="Jonglage de contact">
+                            <div class="slide-caption">
+                                <h3>Jonglage de contact</h3>
+                                <p>Balles de contact en action</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Image 2 -->
+                        <div class="carousel-slide" data-category="levistick">
+                            <img src="img/galerie/levistick-1.jpg" alt="Levistick">
+                            <div class="slide-caption">
+                                <h3>Levistick</h3>
+                                <p>Domptage du bâton du diable</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Image 3 -->
+                        <div class="carousel-slide" data-category="buugeng">
+                            <img src="img/galerie/buuggeng.png" alt="Buugeng">
+                            <div class="slide-caption">
+                                <h3>Buugeng</h3>
+                                <p>Illusions avec les buugeng</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Image 4 -->
+                        <div class="carousel-slide" data-category="diabolo">
+                            <img src="img/galerie/diabolo.png" alt="Diabolo">
+                            <div class="slide-caption">
+                                <h3>Diabolo</h3>
+                                <p>Le sablier dansant</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Image 5 -->
+                        <div class="carousel-slide" data-category="groupe">
+                            <img src="img/galerie/groupe-1.jpg" alt="La Main Occulte en groupe">
+                            <div class="slide-caption">
+                                <h3>L'équipe</h3>
+                                <p>La Main Occulte au complet</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Image 6 -->
+                        <div class="carousel-slide" data-category="levistick">
+                            <img src="img/galerie/devilstick.jpg" alt="Bâton du diable">
+                            <div class="slide-caption">
+                                <h3>Bâton du diable</h3>
+                                <p>Figures au bâton du diable</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Image 7 -->
+                        <div class="carousel-slide" data-category="festival">
+                            <img src="img/galerie/samhain2.jpg" alt="Animation en festival">
+                            <div class="slide-caption">
+                                <h3>Festival Samhain</h3>
+                                <p>Animation au festival Samhain</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Image 8 -->
+                        <div class="carousel-slide" data-category="contact">
+                            <img src="img/galerie/contact-2.jpg" alt="Jonglage contact">
+                            <div class="slide-caption">
+                                <h3>Jonglage de contact</h3>
+                                <p>Balles acryliques</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-btn next" aria-label="Image suivante">❯</button>
+                <!-- Bouton play/pause pour l'auto-play -->
+                <button class="carousel-playpause" aria-label="Lecture automatique">⏸️</button>
+            </div>
+            
+            <!-- Indicateurs de position -->
+            <div class="carousel-indicators"></div>
+            
+            <!-- Miniatures -->
+            <div class="carousel-thumbnails">
+                <div class="thumbnail active" data-index="0">
+                    <img src="img/galerie/ballecontact.jpg" alt="Miniature 1">
+                </div>
+                <div class="thumbnail" data-index="1">
+                    <img src="img/galerie/levistick-1.jpg" alt="Miniature 2">
+                </div>
+                <div class="thumbnail" data-index="2">
+                    <img src="img/galerie/buuggeng.png" alt="Miniature 3">
+                </div>
+                <div class="thumbnail" data-index="3">
+                    <img src="img/galerie/diabolo.png" alt="Miniature 4">
+                </div>
+                <div class="thumbnail" data-index="4">
+                    <img src="img/galerie/groupe-1.jpg" alt="Miniature 5">
+                </div>
+                <div class="thumbnail" data-index="5">
+                    <img src="img/galerie/devilstick.jpg" alt="Miniature 6">
+                </div>
+                <div class="thumbnail" data-index="6">
+                    <img src="img/galerie/samhain2.jpg" alt="Miniature 7">
+                </div>
+                <div class="thumbnail" data-index="7">
+                    <img src="img/galerie/contact-2.jpg" alt="Miniature 8">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Vidéo -->
+    <section class="video-section">
+        <div class="container">
+            <h2>Vidéos</h2>
+            <div class="video-grid">
+                <!-- Vidéo 1 -->
+                <div class="video-item">
+                    <video controls width="100%" height="auto" poster="img/videos/cj-poster.jpg">
+                        <source src="img/videos/cj.mp4" type="video/mp4">
+                        <source src="img/videos/cj.webm" type="video/webm">
+                        Votre navigateur ne supporte pas la balise vidéo. 
+                        <a href="img/videos/cj.mp4">Télécharger la vidéo</a>
+                    </video>
+                    <p>Jonglage de contact</p>
+                </div>
+                
+                <!-- Vidéo 2 -->
+                <div class="video-item">
+                    <video controls width="100%" height="auto" poster="img/videos/diabolo-poster.jpg">
+                        <source src="img/videos/diabolo.mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas la balise vidéo.
+                    </video>
+                    <p>Diabolo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>La Main Occulte</h3>
+                    <p>Mesnil-en-ouche, Normandie</p>
+                </div>
+                <div class="footer-links">
+                    <h4 style="color: #c49a6c; margin-bottom: 1rem;">Liens</h4>
+                    <ul>
+                        <li><a href="animations.html">Nos animations</a></li>
+                        <li><a href="galerie.html">Galerie</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4 style="color: #c49a6c; margin-bottom: 1rem;">Suivez-nous</h4>
+                    <a class="rezo" href="https://www.facebook.com/profile.php?id=61584136633572">facebook</a>
+                    <a class="rezo" href="//www.tiktok.com/@la_main_occulte_">TikTok</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 La Main Occulte - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Overlay pour le menu mobile -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- Scripts externes -->
+    <script src="script.js"></script>
+    <script src="carousel.js"></script>
+</body>
+</html>

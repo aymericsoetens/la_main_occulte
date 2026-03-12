@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos animations - La Main Occulte</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts : UnifrakturMaguntia + Cormorant + Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Cormorant:wght@400;600;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="page-animations">
+    <header>
+        <nav class="navbar">
+           <div class="logo-container">
+    <a href="index.html"><img src="img/logo.png" alt="La Main Occulte"></a>
+</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="animations.html" class="active">Nos animations</a></li>
+                <li><a href="galerie.html">Galerie</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+       <section class="page-header">
+    <div class="container">
+        <h1>Nos animations</h1>
+        <p>✦ Découvrez ce que La Main Occulte vous prépare ✦</p>
+    </div>
+</section>
+
+        <section class="animations" style="padding: 5rem 0;">
+            <div class="container">
+                <!-- Escape game (à décommenter plus tard)
+                <div class="animation-block" style="margin-bottom: 5rem;">
+                    <h2 style="text-align: left; margin-bottom: 1rem;">L'escape game Rutabaga</h2>
+                    <p style="font-size: 1.2rem; color: #6a0dad; margin-bottom: 1.5rem;">Nouveau pour le festival Samhain 2026</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+                        <div>
+                            <p>Plongez dans les mésaventures de la sorcière Rutabaga ! Après avoir tout perdu au casino sur les conseils trompeurs d'une voyante, elle a besoin de votre aide.</p>
+                            <p style="margin-top: 1rem;"><strong>Thème 2026 : "Fée et Volva"</strong> - Un univers mystique entre prophéties et magie ancestrale.</p>
+                            <p style="margin-top: 1rem;">À travers des épreuves mêlant jonglerie et réflexion, découvrez pourquoi la voyante a menti... et aidez Rutabaga à se venger (ou à se réconcilier).</p>
+                            <p style="margin-top: 1.5rem; font-weight: 600;">Durée : 30-45 minutes - À partir de 8 ans</p>
+                        </div>
+                        <div class="image-placeholder">Image escape game</div>
+                    </div>
+                </div>
+                -->
+
+                <!-- Initiation -->
+                <div class="animation-block">
+                    <h2 style="text-align: left; margin-bottom: 1rem;">Initiation à la manipulation d'objets</h2>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+                        <div class="image-placeholder">Photo initiation</div>
+                        <div>
+                            <p>Venez essayer par vous-même ! Nous proposons des ateliers d'initiation ouverts à tous :</p>
+                            <ul style="margin-top: 1rem; list-style-position: inside;">
+                                <li><strong>Jonglage de contact</strong> - Faites flotter les balles</li>
+                                <li><strong>Levistick / Bâton du diable</strong> - Domptez l'objet facétieux</li>
+                                <li><strong>Diabolo</strong> - Lancez le sablier</li>
+                                 <li><strong>Buugeng</strong> - Créez des illusions avec ces miroirs courbes</li>
+                            </ul>
+                            <p style="margin-top: 1.5rem;">Accessible à tous les niveaux, dès 6 ans. Matériel fourni.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>La Main Occulte</h3>
+                    <p>Mesnil-en-ouche, Normandie</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Liens rapides</h4>
+                    <ul>
+                        <li><a href="animations.html">Nos animations</a></li>
+                        <li><a href="galerie.html">Galerie</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Suivez-nous</h4>
+                     <a class="rezo" href="https://www.facebook.com/profile.php?id=61584136633572">facebook</a>
+                             <a class="rezo" href="//www.tiktok.com/@la_main_occulte_">TikTok</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 La Main Occulte - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Overlay pour le menu mobile -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <script>
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav-links');
+        const overlay = document.getElementById('menuOverlay');
+        
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('nav-active');
+            burger.classList.toggle('toggle');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = nav.classList.contains('nav-active') ? 'hidden' : 'auto';
+        });
+        
+        overlay.addEventListener('click', () => {
+            nav.classList.remove('nav-active');
+            burger.classList.remove('toggle');
+            overlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+        
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('nav-active');
+                burger.classList.remove('toggle');
+                overlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - La Main Occulte</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts : UnifrakturMaguntia + Cormorant + Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Cormorant:wght@400;600;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="page-contact">
+    <header>
+        <nav class="navbar">
+          <div class="logo-container">
+    <a href="index.html"><img src="img/logo.png" alt="La Main Occulte"></a>
+</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="animations.html">Nos animations</a></li>
+                <li><a href="galerie.html">Galerie</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+     <section class="page-header">
+    <div class="container">
+        <h1>Contactez-nous</h1>
+        <p>✦ Une question ? Une réservation ? Écrivez-nous ! ✦</p>
+    </div>
+</section>
+
+        <section class="contact" style="padding: 5rem 0;">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+                    <div>
+                        <h2 style="text-align: left;">Écrivez-nous</h2>
+                        <p style="margin-bottom: 2rem;">Pour toute question, réservation ou collaboration, n'hésitez pas à nous contacter.</p>
+                        
+                        <div style="margin-bottom: 2rem;">
+                            <h3 style="color: #c49a6c; margin-bottom: 0.5rem;">📍 Adresse</h3>
+                            <p>Mesnil-en-ouche, Normandie</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 2rem;">
+                            <h3 style="color: #c49a6c; margin-bottom: 0.5rem;">📧 Email</h3>
+                            <p>asso.la.main.occulte@gmail.com</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 2rem;">
+                            <h3 style="color: #c49a6c; margin-bottom: 0.5rem;">🌐 Réseaux</h3>
+                             <a class="rezo" href="https://www.facebook.com/profile.php?id=61584136633572">facebook</a>
+                             <a class="rezo" href="//www.tiktok.com/@la_main_occulte_">TikTok</a>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <form action="https://formspree.io/f/xyz123" method="POST" class="contact-form" style="background: #000000; padding: 2rem; border-radius: 10px;">
+                            <h2 style="text-align: left; margin-bottom: 1.5rem;">Envoyer un message</h2>
+                            
+                            <div style="margin-bottom: 1rem;">
+                                <label for="nom" style="display: block; margin-bottom: 0.5rem;">Nom</label>
+                                <input type="text" id="nom" name="name" required style="width: 100%; padding: 0.75rem; border: 1px solid #6b2d9c; border-radius: 4px; background: #1a1e24; color: white;">
+                            </div>
+                            
+                            <div style="margin-bottom: 1rem;">
+                                <label for="email" style="display: block; margin-bottom: 0.5rem;">Email</label>
+                                <input type="email" name="email" required id="email" style="width: 100%; padding: 0.75rem; border: 1px solid #6b2d9c; border-radius: 4px; background: #1a1e24; color: white;">
+                            </div>
+                            
+                            <div style="margin-bottom: 1rem;">
+                                <label for="message" style="display: block; margin-bottom: 0.5rem;">Message</label>
+                                <textarea name="message" rows="5" required id="message" style="width: 100%; padding: 0.75rem; border: 1px solid #6b2d9c; border-radius: 4px; background: #1a1e24; color: white;"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn" style="width: 100%;">Envoyer</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>La Main Occulte</h3>
+                   <p>Association de jonglerie - Mesnil-en-ouche, Normandie</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Liens rapides</h4>
+                    <ul>
+                        <li><a href="animations.html">Nos animations</a></li>
+                        <li><a href="galerie.html">Galerie</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Suivez-nous</h4>
+                     <a class="rezo" href="https://www.facebook.com/profile.php?id=61584136633572">facebook</a>
+                             <a class="rezo" href="//www.tiktok.com/@la_main_occulte_">TikTok</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 La Main Occulte - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Overlay pour le menu mobile -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <script>
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav-links');
+        const overlay = document.getElementById('menuOverlay');
+        
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('nav-active');
+            burger.classList.toggle('toggle');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = nav.classList.contains('nav-active') ? 'hidden' : 'auto';
+        });
+        
+        overlay.addEventListener('click', () => {
+            nav.classList.remove('nav-active');
+            burger.classList.remove('toggle');
+            overlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+        
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('nav-active');
+                burger.classList.remove('toggle');
+                overlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
